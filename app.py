@@ -6,6 +6,7 @@ restaurantes = [{'nome':'Aoshi', 'categoria':'japonesa','ativo':False},
                 ]
 
 def exibir_nome():
+    
     print('𝕊𝕒𝕓𝕠𝕣 𝔼𝕩𝕡𝕣𝕖𝕤𝕤\n')
 
 def exibir_opcoes():
@@ -34,6 +35,17 @@ def opcao_invalida():
     retorno_menu()
 
 def cadastrar_novo_restaurante():
+    '''Essa função serve para cadastrar o restaurate
+    
+    Inputs:
+    
+    -Nome do restaurante
+    -Categoria
+    
+    Outputs
+    -Adiciona um novo restaurante a lista de restaurantes
+        
+    '''
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_restaurante = input('Digite o nome do restaurante, para cadastrar: ')
     categoria = input(f'Digite a categoria do restaurante {nome_restaurante}: ')
@@ -56,6 +68,11 @@ def listar_restaurantes():
     retorno_menu()
 
 def alternar_estado_restaurante():
+    ''' Altera o estado ativo/desativado de um restaurante 
+    
+    Outputs:
+    - Exibe mensagem indicando o sucesso da operação
+    '''
     exibir_subtitulo('ALTERNANDO O ESTADO DO RESTAURANTE')
     nome_restaurante = input('Digite o nome do restaurante que deseja alterar o estado: ')
     restaurante_encontrado = False
@@ -76,6 +93,12 @@ def alternar_estado_restaurante():
     retorno_menu()
     
 def escolher_opcoes():
+    ''' Solicita e executa a opção escolhida pelo usuário 
+    
+    Outputs:
+    - Executa a opção escolhida pelo usuário
+    '''
+    
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         #opcao_escolhida = int(opcao_escolhida)
